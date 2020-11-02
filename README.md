@@ -1,4 +1,4 @@
-# jkrb
+# jkrb 本仓库只储存了核心脚本,含运行环境的脚本请下载百度网盘的分享.
 健康日报
 需要先安装Nodejs puppeteer
 
@@ -12,3 +12,8 @@
 
 已知不足:
 定时运行还没写
+
+含运行环境的脚本:
+链接：https://pan.baidu.com/s/1bXMTBuoOCC6XSsKNblwZDw 
+提取码：jkrb 
+复制这段内容后打开百度网盘手机App，操作更方便哦
