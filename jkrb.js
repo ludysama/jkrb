@@ -95,7 +95,8 @@ const puppeteer = require('puppeteer');
     //填写标签为"学院"的edittext,内容输入为"软件学院",截图
     await frame2.waitForSelector('#SZXY\\$text');
     const academy_edt = await frame2.$('#SZXY\\$text');
-    await academy_edt.click({ delay: 200 });
+    //点击三下输入框,全选之前存在的内容后,再输入内容替换原有的
+    await academy_edt.click({ clickCount: 3 });
     await academy_edt.type('软件学院', { delay: 300 });
     await page.screenshot({
         path: '9.png'
