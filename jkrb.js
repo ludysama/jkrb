@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer');
 
 (async () => {
+    console.info('20201105-1130');
     let width = 1200;
     let height = 960;
     //完全信任网站的时候可以取消沙盒,定义游览器的时候要定义长宽
@@ -18,8 +19,8 @@ const puppeteer = require('puppeteer');
     });
     //!!!!使用前需按个人情况更改!!!!
     //填写登录界面的表单,此注释下一行括号中最后一个字符串是学号,此注释下两行货号中最后一个字符串是密码
-    await page.type('#form1 > input.username', '312030****');
-    await page.type('#form1 > input.pwd', 'L*******4');
+    await page.type('#form1 > input.username', '3120******');
+    await page.type('#form1 > input.pwd', 'L********4');
     await page.screenshot({
         path: '2.png'
     });
@@ -91,16 +92,18 @@ const puppeteer = require('puppeteer');
     await page.screenshot({
         path: '8.png'
     });
+
     //!!!!使用前需按个人情况更改!!!!
-    //填写标签为"学院"的edittext,内容输入为"软件学院",截图
+    //填写标签为"学院"的edittext,内容输入为"**学院",截图
     await frame2.waitForSelector('#SZXY\\$text');
     const academy_edt = await frame2.$('#SZXY\\$text');
     //点击三下输入框,全选之前存在的内容后,再输入内容替换原有的
     await academy_edt.click({ clickCount: 3 });
-    await academy_edt.type('软件学院', { delay: 300 });
+    await academy_edt.type('**学院', { delay: 300 });
     await page.screenshot({
         path: '9.png'
     });
+
     //!!!!使用前需按个人情况更改!!!!
     //填写标签为"当日体温"的edittext,内容输入为"36.5",截图
     await frame2.waitForSelector('#BRTW\\$text');
@@ -127,5 +130,6 @@ const puppeteer = require('puppeteer');
     await browser.close();
 
 })();
+
 
 
